@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build&run",
+            "type": "shell",
+            "command": "g++ -g ./parent/*.cpp -lncurses -o parent.out && g++ -g ./child/*.cpp -lcurses -o child.out && ./parent.out",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },       
+        {
+            "label": "build",
+            "type": "shell",
+            // "command": "g++ -w -g ./parent/*.cpp -o parent.exe | g++ -w -g ./child/*.cpp -o child.exe | g++ -w -g ./controller/*.cpp -o controller.exe",
+            "command": "g++ -w -g ./parent/*.cpp -lncurses -lrt -o parent.out && g++ -w -g ./controller/*.cpp -lncurses -lrt -o controller.out && g++ -w -g ./child/*.cpp -lcurses -lrt -o child.out && g++ -g -w ./client/*.cpp -lncurses -o client.out && g++ -g -w ./serv/*.cpp -lncurses -o serv.out",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "./parent.out",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+﻿  Resolve-Path : Не удается найти путь "C:\Users\User\Desktop\VSunProjects\C_Cpp\
+  4_sem\spo\lab1\Debug\lab1.exe", так как он не существует.
+  D:\Projects\SW\MVS\TradeBot3.0\WS_C++_GCC\vcpkg-master\scripts\buildsystems\msb
+  uild\applocal.ps1:31 знак:41
+  +         $targetBinaryPath = Resolve-Path <<<<  $targetBinary -erroraction sto
+  p
+      + CategoryInfo          : ObjectNotFound: (C:\Users\User\D...\Debug\lab1.e 
+     xe:String) [Resolve-Path], ItemNotFoundException
+      + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.Resol 
+     vePathCommand
+   
